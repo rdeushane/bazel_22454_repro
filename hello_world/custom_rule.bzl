@@ -7,7 +7,7 @@ load("@bazel_tools//tools/cpp:toolchain_utils.bzl", "find_cpp_toolchain")
 def _cc_custom_rule_impl(ctx):
     cc_toolchain = find_cpp_toolchain(ctx)
     print("Compiler: " + cc_toolchain.compiler)
-    print("CcToolchainInfo methods: \n" + "\n".join(dir(cc_toolchain)))
+    print("CcToolchainInfo methods: \n" + " ".join(dir(cc_toolchain)))
     print("cc_toolchain.compiler_files {}".format(cc_toolchain.compiler_files))
     print("cc_toolchain.compiler_files methods {}".format(dir(cc_toolchain.compiler_files)))
     fail("End debug dump.")
