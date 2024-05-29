@@ -9,7 +9,7 @@ def _cc_custom_rule_impl(ctx):
     print("Compiler: " + cc_toolchain.compiler)
     print("CcToolchainInfo methods: \n" + " ".join(dir(cc_toolchain)))
     print("cc_toolchain.compiler_files: {}".format(cc_toolchain.compiler_files))
-    print("cc_toolchain.compiler_files methods: {}".format(dir(cc_toolchain.compiler_files)))
+    print("cc_toolchain.compiler_files methods: {}".format(cc_toolchain.compiler_files()))
     fail("End debug dump.")
 
     (__, compile_outputs) = cc_common.compile(
